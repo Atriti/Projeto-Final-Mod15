@@ -1,0 +1,27 @@
+select * 
+from Aulas;
+
+select * 
+from Aulas 
+where nome = "Aula de Balalaica";
+
+select *
+from Professores p
+join Alunos a ON p.idProfessor = a.idAluno;
+
+select avg(idade) as  Média_Idades
+from Alunos;
+
+select count(idade) as N_Alunos
+from Alunos;
+
+select max(idade) as Maior_Idade
+from Alunos;
+
+update Professores
+set nome = "Paliy Maçã da Silva Verde " 
+where nome = "Paliy Maçã Jr Duarte"; 
+
+delete
+from Aulas
+where nome = "aula de Kugikly";

@@ -1,0 +1,36 @@
+Create Database EscolaMusica;
+Use EscolaMusica;
+
+CREATE TABLE Alunos(
+idAluno int primary key auto_increment,
+nome varchar(100),
+idade int;
+
+CREATE TABLE Professores(
+idProfessor int primary key auto_increment,
+nome varchar(100),
+materia varchar(100));
+
+CREATE TABLE Cursos(
+idCurso int primary key auto_increment,
+nome varchar(100),
+idProfessor int,
+FOREIGN KEY (idProfessor) REFERENCES Professores (idProfessor));
+
+CREATE TABLE Aulas(
+idAula int primary key auto_increment,
+nome varchar(100),
+idAluno int,
+FOREIGN KEY (idAluno) REFERENCES Alunos (idAluno),
+idCurso int,
+FOREIGN KEY (idCurso) REFERENCES Cursos (idCurso));
+
+CREATE TABLE Instrumentos(
+idInstrumento int primary key auto_increment,
+nome varchar(100));
+
+Create Table Aulas_Instrumentos(
+idCurso int,
+FOREIGN KEY (idCurso) REFERENCES Cursos (idCurso),
+idInstrumento int,
+FOREIGN KEY (idInstrumento) REFERENCES Instrumentos (idInstrumento));

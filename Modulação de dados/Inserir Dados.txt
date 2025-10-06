@@ -1,0 +1,47 @@
+Insert into Instrumentos(nome) values
+("Balalaica"),
+("Domra"),
+("Gusli"),
+("Garmon"),
+("Zhaleika"),
+("Kugikly");
+
+Insert into Cursos(nome, idProfessor) values
+("Tocador de Balalaica", "1"),
+("Tocador de Domra", "2"),
+("Tocador de Gusli", "3"),
+("Tocador de Garmon", "4"),
+("Tocador de Zhaleika", "5"),
+("Tocador de Kugikly", "6");
+
+Insert into Alunos(nome, idade) values
+("Bogdan Bordô Jr", 21),
+("Paliy Maçã Jr Duarte", 17),
+("Blyat Canteiro", 18),
+("Vladimir Pótin Pimenta", 19),
+("Alexander Sergey", 37),
+("Kuralay Zhazira", 19);
+
+Insert into Professores(nome, materia) values
+("Nurlana Meruert", "Balalaica"),
+("Svetlana Ekaterina", "Domra"),
+("Lyudmila Nadezhda",  "Gusli"),
+("Galin Fidor", "Garmon"),
+("Yuri Nikolai", "Zhaleika"),
+("Bohdan Pavel", "Kugikly");
+
+Insert into Aulas(nome, idAluno, idCurso) values
+("Aula de Balalaica", 1, 1),
+("Aula de Domra", 2, 2),
+("Aula de Gusli", 3, 3),
+("Aula de Garmon", 4, 4),
+("Aula de Zhaleika", 5, 5),
+("Aula de Kugikly", 6, 6);
+
+Insert into Aulas_Instrumentos(idCurso, idInstrumento) values
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6);
