@@ -4,7 +4,7 @@ Use EscolaMusica;
 CREATE TABLE Alunos(
 idAluno int primary key auto_increment,
 nome varchar(100),
-idade int;
+idade int);
 
 CREATE TABLE Professores(
 idProfessor int primary key auto_increment,
@@ -33,4 +33,5 @@ Create Table Aulas_Instrumentos(
 idCurso int,
 FOREIGN KEY (idCurso) REFERENCES Cursos (idCurso),
 idInstrumento int,
+
 FOREIGN KEY (idInstrumento) REFERENCES Instrumentos (idInstrumento));
